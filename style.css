@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Macondo+Swash+Caps&display=swap');
+
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    
+    font-family: var(--ff);
+
+}
+
+:root{
+    --ff:'Macondo Swash Caps', cursive;
+    --lightGreen:#B2BEBF;
+    --darkGreen:#889C9B;
+    --hardGreen:#486966;
+    --red:#C74141;
+    --cream:#E9DBDB;
+    --grey:#D9D9D9;
+    --dark:#362F2F
+}
+header{
+    height: 40vh;
+    background-image:url("./images/bg.png") ;
+    background-repeat: no-repeat;
+    background-size: 50%;
+    background-position: right;
+    width: 100%;
+    background-color: var(--darkGreen);  
+  
+
+}
+.brand{
+      display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+   width: 50%;
+   height: 100%;
+   font-family: var(--ff);
+   font-size: 4rem;
+   color:var(--red)
+    
+}
+.slogan{
+    color:black;
+    font-size: 2rem;
+}
+.products
+{
+    /* height: 35vh; */
+    background-color: var(--red);
+    display: flex;
+    gap:1rem;
+    flex-wrap:wrap;
+    justify-content: center;
+    align-items: center;
+    padding:1rem;
+}
+.product{
+    background-color: var(--dark);
+    width: 10%;
+    /* height:15vh; */
+    text-align: center;
+    padding:0.5rem;
+    
+}
+.product a{
+    text-decoration:none;
+}
+.product img{
+    width: 80%;  
+    height: 80px;
+}
+.product p{
+    background-color: var(--cream);
+    padding:0.3rem;
+    border-radius:0.5rem;
+}
+.siparis{
+    width: 100%;
+    background-color:var(--lightGreen) ;
+    
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+    
+}
+
+.urunGiris{
+    width: 100%;
+   display:flex;  
+    gap:1rem;
+   justify-content: center;
+    align-items: center;
+}
+.siparisOlustur{
+    width: 12%;
+    padding:1rem;
+    background-color: var(--darkGreen);
+    border:2px solid var(--hardGreen);
+}
+.siparisOlustur a{
+    display: flex; 
+    
+    text-decoration: none;
+  
+}
+
+.siparisOlustur a img{
+    width: 100%;
+}
+
+.masalar{
+    display:flex;
+    flex-wrap: wrap;
+}
+.masa1{
+    padding:0.5rem;
+    margin:0.5rem;
+    /* background-color: var(--hardGreen); */
+}
+.masaNo{
+    text-align: center;
+    padding:0.5rem;
+    width: 100px;
+    height: 100px;
+background-color: var(--hardGreen);
+border-radius: 50%;
+}
+.masaSip{
+    width: 200px;
+    height: 100px;
+    background-color: var(--hardGreen);
+    margin-top:-60px;
+    display: flex; flex-direction: column;
+
+}
+
+.SirarisEdilmisUrun{
+    display: flex;
+    align-items: center;
+    padding:0.2rem 0.5rem;
+    justify-content: space-between;
+    gap:0.8rem;
+
+}
+
+.HesapKapat{
+    background-color:var(--darkGreen);
+    text-align: center;
+}
