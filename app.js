@@ -11,6 +11,8 @@ import pro from "./data.js";
 console.log(pro);
 let pTextContent = 0;
 
+// Ürüne tıklanınca ürün textboxa ekleniyor
+
 productDiv.forEach((div) => {
   div.addEventListener("click", function (e) {
     e.preventDefault();
@@ -26,6 +28,8 @@ productDiv.forEach((div) => {
   });
 });
 
+// masaya tıklanınca masa numarası ekleniyor
+
 masaNo.forEach((div) => {
   div.addEventListener("click", function (e) {
     e.preventDefault();
@@ -37,6 +41,8 @@ masaNo.forEach((div) => {
     }
   });
 });
+
+// Sipariş butonuna basılınca masa görüntüsü üzerine ekleniyor
 
 sipButton.addEventListener("click", function (e) {
   e.preventDefault();
@@ -56,7 +62,7 @@ sipButton.addEventListener("click", function (e) {
        
 
           <div class="SirarisEdilmisUrun">
-          <img src="${x.icon}" width="30px" alt="">
+          <img src="${x.icon}" width="40px" alt="">
           <p>${x.title}</p>
           <p>${x.price}TL</p>
           <a href="" id="del"><i class="fa-solid fa-trash"></i></a> 
@@ -65,8 +71,11 @@ sipButton.addEventListener("click", function (e) {
         `;
         masaSip.innerHTML += contentSiparis ;
         }
+      
      
       });
+      masaKoduGirisi.value=""
+      urunKoduGirisi.value=""
     }
   masaSip.addEventListener('click', function (e) {
     console.log("merhaba")
@@ -82,7 +91,25 @@ sipButton.addEventListener("click", function (e) {
 
   });
 
+// hesabıkapat butonu ile hesap temizleme
 
+// Tüm "Hesabı Kapat" bağlantılarını alır
+const hesabiKapatLinks = document.querySelectorAll('.hesapKapat a');
 
+hesabiKapatLinks.forEach(link => {
+  // Her bağlantıya tıklanma olayı ekler
+  link.addEventListener('click', function(event) {
+    event.preventDefault();
 
-              
+    // Tıklanan bağlantının üstünde bulunan ".masa1" elemanını bulur
+    const parentMasa = link.closest('.masa1');
+
+    // Eğer ".masa1" elemanı bulunursa ve içinde ".masaSip" elemanı varsa, içeriği temizler
+    if (parentMasa) {
+      const masaSipElement = parentMasa.querySelector('.masaSip');
+      if (masaSipElement) {
+        masaSipElement.innerHTML = ''; // İçeriği temizler
+      }
+    }
+  });
+});       
